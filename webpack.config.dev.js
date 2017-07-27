@@ -16,12 +16,22 @@ export default {
         rules: [
             {
                 test: /\.js$/,
-                use: ['babel-loader'],
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ['env', { modules: false}]
+                        ]
+                    }
+                }],
                 exclude: /node_modules/
             },
             {
                 test: /\.css$/,
-                use: ['style', 'css']
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
             }
         ]
 

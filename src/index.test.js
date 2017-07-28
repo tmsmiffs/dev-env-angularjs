@@ -19,4 +19,4 @@ describe('index.html', () => {
         });
     });
 });
-/*eslint-enable */
+/* eslint-enable */
